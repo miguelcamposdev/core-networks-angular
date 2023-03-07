@@ -1,0 +1,14 @@
+<!-- INTERPOLACION: One way (DEL COMPONENTE >>>> VISTA, TS >>>> HTML)-->
+<p>{{listadoElementos[0].name}}</p>
+
+<p>Elemento 0: {{getElement(0)}}</p>
+<p>Elemento 1: {{getElement(1)}}</p>
+
+<p>{{nombre}}</p>
+
+<!-- EVENT BINDING: One way (DE LA VISTA >>>> COMPONENTE, HTML >>>> TS)-->
+<button (click)="openDialog()">Haz click aquí</button>
+
+<!-- USO DE INTERPOLATION Y EVENT BINDING -->
+<p>Elemento {{i}}: {{getElement(i)}}</p>
+<button *ngIf="i < this.listadoElementos.length - 1" (click)="siguienteElemento()">>></button>
