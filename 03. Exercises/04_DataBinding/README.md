@@ -6,14 +6,16 @@ Realizar una pantalla de inicio de sesión (LOGIN), que haciendo uso de TWO WAY 
 
 ## Ejercicio 2
 
-Realizar una pantalla de inicio de sesión (LOGIN), haciendo uso de Angular Material. Dicha pantalla debe tener:
+Realizar una pantalla de registro, haciendo uso de Angular Material, haciendo uso de una clase similar a lo que hemos visto con la clase Hero. Dicha pantalla debe tener:
 
 - Toolbar.
+- Nombre
+- Apellidos
 - Email: https://material.angular.io/components/form-field/overview
 - Contraseña: https://material.angular.io/components/form-field/overview
-- Botón de inicio de sesión: https://material.angular.io/components/button/examples
+- Botón de registro: https://material.angular.io/components/button/examples
 
 NgModel in forms: https://angular.io/guide/forms
 
 SE PIDE:
-Haciendo uso de ngModel (two ways data binding) guardar el email y contraseña escrito en el formulario de login para mostrarlo por consola (console.log()), al hacer click en el botón de Login.
+Haciendo uso de ngModel (two ways data binding) mostrar por consola los valores introducidos en el formulario (console.log()), al hacer click en el botón de Registro.
