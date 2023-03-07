@@ -23,6 +23,9 @@ export class PeriodicTableComponent {
   listadoElementos = ELEMENT_DATA;
   nombre = 'Angular';
   i = 0;
+  anchura = 200;
+  imageUrl =
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png';
 
   openDialog() {
     alert('Has hecho click en el botón. Enhorabuena!');
@@ -33,10 +36,23 @@ export class PeriodicTableComponent {
   }
 
   siguienteElemento() {
-    if (this.i >= this.listadoElementos.length - 1) {
-      alert('Has llegado al último elemento');
+    this.i++;
+  }
+
+  anteriorElemento() {
+    this.i--;
+  }
+
+  cambiarImagen() {
+    if (
+      this.imageUrl ==
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv7-VtZdhaA5nfe0WLR0ASbhe3s_u97wLh0g&usqp=CAU'
+    ) {
+      this.imageUrl =
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png';
     } else {
-      this.i++;
+      this.imageUrl =
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv7-VtZdhaA5nfe0WLR0ASbhe3s_u97wLh0g&usqp=CAU';
     }
   }
 }

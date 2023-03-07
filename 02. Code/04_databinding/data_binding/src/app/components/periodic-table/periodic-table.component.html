@@ -11,4 +11,15 @@
 
 <!-- USO DE INTERPOLATION Y EVENT BINDING -->
 <p>Elemento {{i}}: {{getElement(i)}}</p>
+<input type="button" *ngIf="i > 0" (click)="anteriorElemento()" value="<<" />
 <button *ngIf="i < this.listadoElementos.length - 1" (click)="siguienteElemento()">>></button>
+
+<!-- PROPERTY BINDING -->
+<br />
+<img width="200px" [src]="imageUrl" />
+<button (click)="cambiarImagen()">Cambiar imagen</button>
+
+
+<!-- TWO WAY DATA BINDING -->
+<br /><input type="number" [(ngModel)]="anchura" />
+<p>Anchura: {{anchura}}</p>
