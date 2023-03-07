@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      Email: <br />
+      <input type="text" class="form-control" [(ngModel)]="loginData.email" /><br />
+
+      Password: <br />
+      <input type="password" class="form-control" [(ngModel)]="loginData.password" /><br />
+
+      <input *ngIf="isValid()" class="btn btn-warning" (click)="doLogin()" type="button" value="Login" />
+    </div>
+  </div>
+</div>

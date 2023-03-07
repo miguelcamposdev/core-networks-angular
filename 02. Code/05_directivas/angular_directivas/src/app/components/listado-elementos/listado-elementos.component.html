@@ -1,0 +1,12 @@
+<p>ELEMENTOS TABLA PERIÓDICA</p>
+
+<input type="number" [(ngModel)]="porcentaje" /><br />
+<p><ngb-progressbar [showValue]="true" type="success" [value]="porcentaje"></ngb-progressbar></p>
+
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+  <ngb-panel *ngFor="let elemento of listadoElementos; index as i" title="{{i+1}}. {{elemento.name}}">
+    <ng-template ngbPanelContent>
+      Position: {{elemento.position}}, Weight: {{elemento.weight}}, Symbol: <strong>{{elemento.symbol}}</strong>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>

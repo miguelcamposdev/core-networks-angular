@@ -4,10 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { PeriodicTableComponent } from './components/periodic-table/periodic-table.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [AppComponent, PeriodicTableComponent],
-  imports: [BrowserModule, FormsModule],
+  declarations: [AppComponent, PeriodicTableComponent, LoginFormComponent],
+  imports: [BrowserModule, FormsModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })

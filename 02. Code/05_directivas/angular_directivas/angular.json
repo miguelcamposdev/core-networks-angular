@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "data_binding": {
+    "angular_directivas": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/data_binding",
+            "outputPath": "dist/angular_directivas",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "data_binding:build:production"
+              "browserTarget": "angular_directivas:build:production"
             },
             "development": {
-              "browserTarget": "data_binding:build:development"
+              "browserTarget": "angular_directivas:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "data_binding:build"
+            "browserTarget": "angular_directivas:build"
           }
         },
         "test": {
