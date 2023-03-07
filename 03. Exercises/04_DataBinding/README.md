@@ -2,6 +2,10 @@
 
 ## Ejercicio 1
 
+Realizar una pantalla de inicio de sesión (LOGIN), que haciendo uso de TWO WAY DATA BINDING (ngModel), muestre por consola el email y la contraseña que el usuario escriba, cuando éste haga click en el botón de login. Además el botón de login solo debe mostrarse si el usuario y la contraseña no son vacíos.
+
+## Ejercicio 2
+
 Realizar una pantalla de inicio de sesión (LOGIN), haciendo uso de Angular Material. Dicha pantalla debe tener:
 
 - Toolbar.
