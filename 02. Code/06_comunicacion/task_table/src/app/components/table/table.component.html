@@ -1,0 +1,27 @@
+<p>TAREAS</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Progreso</th>
+      <th scope="col">Valor</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tarea of listadoTareas; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>
+        <app-task [nombre]="tarea.nombre"></app-task>
+      </td>
+      <td>
+        <app-progress-bar [valor]="tarea.valorCompletado" />
+      </td>
+      <td>
+        <app-label [valor]="tarea.valorCompletado" [count]="i" (nuevoValor)="modificarValor($event)" />
+      </td>
+    </tr>
+    <app-task></app-task>
+  </tbody>
+</table>
