@@ -1,2 +1,31 @@
 <button (click)="changeColor()">Alternar color</button><button (click)="changeBold()">Alternar negrita</button>
 <p [ngClass]="{'texto-rojo': isRed, 'negrita': isBold}">listado-alumnos works!</p>
+
+<p>Table is just a mapping of objects to table rows with <code>ngFor</code></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Sexo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let alumno of listadoAlumnos; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>
+        {{alumno.nombre}}
+      </td>
+      <td>
+        {{alumno.apellidos}}
+      </td>
+      <td>
+        {{alumno.edad}} años <span *ngIf="alumno.edad < 18">&#9733; Menor</span>
+      </td>
+      <td>{{ isHombre(alumno)? 'H': 'M' }}</td>
+    </tr>
+  </tbody>
+</table>
