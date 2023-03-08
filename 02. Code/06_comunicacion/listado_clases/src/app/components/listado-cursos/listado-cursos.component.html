@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre del curso</th>
+      <th scope="col">Nº alumnos inscritos</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let curso of listadoCursos; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ curso.nombre }}</td>
+      <td><app-numero-alumnos [cursoInput]="curso" [cursoPosition]="i"
+          (numeroAlumnosChange)="mostrarNuevoNumeroAlumnos($event)"></app-numero-alumnos></td>
+    </tr>
+  </tbody>
+</table>
+<p>Total alumnos matriculados: {{totalAlumnosMatriculados}}</p>
