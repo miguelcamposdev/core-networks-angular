@@ -8,14 +8,5 @@ import { Curso } from 'src/app/models/curso.interface';
   styleUrls: ['./numero-alumnos.component.css'],
 })
 export class NumeroAlumnosComponent {
-  @Input() cursoPosition: number = 0;
   @Input() cursoInput: Curso = { nombre: '', numeroAlumnos: 0 };
-  @Output() numeroAlumnosChange = new EventEmitter<CursoEmitter>();
-
-  emitirNuevoValor() {
-    this.numeroAlumnosChange.emit({
-      position: this.cursoPosition,
-      curso: this.cursoInput,
-    });
-  }
 }

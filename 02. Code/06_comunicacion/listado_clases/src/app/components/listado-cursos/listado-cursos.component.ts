@@ -17,23 +17,13 @@ export class ListadoCursosComponent implements OnInit {
   listadoCursos = CURSOS;
   totalAlumnosMatriculados = 0;
 
-  ngOnInit(): void {
-    this.calcularTotalMatriculados();
-  }
-
-  mostrarNuevoNumeroAlumnos(cursoModificado: CursoEmitter) {
-    this.listadoCursos[cursoModificado.position].numeroAlumnos =
-      cursoModificado.curso.numeroAlumnos;
-    this.calcularTotalMatriculados();
-    console.log(
-      `Nuevo numero alumnos en el curso  ${cursoModificado.curso.nombre} con ${cursoModificado.curso.numeroAlumnos} alumnos`
-    );
-  }
+  ngOnInit(): void {}
 
   calcularTotalMatriculados() {
     this.totalAlumnosMatriculados = 0;
     this.listadoCursos.forEach((curso) => {
       this.totalAlumnosMatriculados += curso.numeroAlumnos;
     });
+    return this.totalAlumnosMatriculados;
   }
 }

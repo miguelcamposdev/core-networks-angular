@@ -10,9 +10,8 @@
     <tr *ngFor="let curso of listadoCursos; index as i">
       <th scope="row">{{ i + 1 }}</th>
       <td>{{ curso.nombre }}</td>
-      <td><app-numero-alumnos [cursoInput]="curso" [cursoPosition]="i"
-          (numeroAlumnosChange)="mostrarNuevoNumeroAlumnos($event)"></app-numero-alumnos></td>
+      <td><app-numero-alumnos [cursoInput]="curso"></app-numero-alumnos></td>
     </tr>
   </tbody>
 </table>
-<p>Total alumnos matriculados: {{totalAlumnosMatriculados}}</p>
+<p>Total alumnos matriculados: {{calcularTotalMatriculados()}}</p>

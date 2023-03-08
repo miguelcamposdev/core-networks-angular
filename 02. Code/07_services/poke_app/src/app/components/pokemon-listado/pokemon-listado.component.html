@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6">
+      <app-pokemon-item *ngFor="let p of listadoPokemon" [pokemon]="p"></app-pokemon-item>
+
+    </div>
+    <div class="col-6">
+      {{pokemonSeleccionado.name}}
+    </div>
+  </div>
+</div>
