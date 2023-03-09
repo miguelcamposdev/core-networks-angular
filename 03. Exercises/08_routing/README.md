@@ -13,3 +13,15 @@ Deberá programarse por tanto un componente para mostrar el detalle de una pelí
 https://swapi.dev/api/films/1
 
 Siendo en este caso la URL para mostrar la película con ID 1.
+
+## Ejercicio 2
+
+Relizar una mejora sobre el código realizado en clase que muestra la lista de Películas populares.
+
+- Al acceder al detalle de una película se debe mostrar la información básica de esa película. Utilizar para ello el endpoint declarado en la siguiente página de la documentación:
+
+https://developers.themoviedb.org/3/movies/get-movie-details
+
+- Después debemos mostrar una lista de trailers de esa película (si existen). La request que tendremos que lanzar está descrita en la siguiente página que nos facilita un endpoint para poder obtener los videos de una película:
+
+https://developers.themoviedb.org/3/movies/get-movie-videos
