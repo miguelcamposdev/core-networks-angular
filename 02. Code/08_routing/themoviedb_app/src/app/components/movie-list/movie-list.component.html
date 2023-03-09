@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-3" *ngFor="let movie of movieList">
+    <div class="card" style="width: 18rem;">
+      <div>
+        <img [src]="getMoviePhoto(movie)" class="card-img-top" alt="...">
+        <circle-progress class="progressBar" [subtitle]="''" [backgroundColor]="'#FFFFFF'" [radius]="20"
+          [outerStrokeWidth]="5" [percent]="movie.vote_average * 10" [animation]="true"
+          [animationDuration]="300"></circle-progress>
+      </div>
+
+      <div class="card-body">
+        <h5 class="card-title">{{movie.title}} ({{movie.vote_average}})</h5>
+        <p class="card-text">{{movie.overview | summary }}
+        </p>
+        <a [routerLink]="['/movies/detail', movie.id]" class="btn btn-primary">Ver detalle</a>
+      </div>
+    </div>
+  </div>
+</div>
