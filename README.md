@@ -18,7 +18,6 @@
 * [Transforming Data Using Pipes
 ](https://angular.io/guide/pipes)
 * [Using a pipe in a template](https://angular.io/guide/pipe-template)
-* []()
 * [Understanding communicating with backend services using HTTP](https://angular.io/guide/understanding-communicating-with-http)
 * [HTTP - Intercept requests and responses](https://angular.io/guide/http-intercept-requests-and-responses)
 * [Routing](https://angular.io/guide/routing-overview)
