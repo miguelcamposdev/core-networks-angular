@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MoviePopular } from 'src/app/models/movie-popular.interface';
+import { MoviePopular } from 'src/app/models/interface/movie-popular.interface';
 import { MovieService } from 'src/app/services/movie.service';
 
 @Component({

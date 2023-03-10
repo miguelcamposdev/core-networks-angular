@@ -1,10 +1,10 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { MoviePopularResponse } from '../models/movie-popular.interface';
+import { environment } from 'src/environments/environment.development';
+import { MoviePopularResponse } from '../models/interface/movie-popular.interface';
 
-const BASE_URL = 'https://api.themoviedb.org/3/movie';
-const API_KEY = '065ebde131b83e963a2deb327ebb45ab';
+const MOVIE_URL = `${environment.API_BASE_URL}/movie`;
 
 @Injectable({
   providedIn: 'root',
@@ -13,9 +13,7 @@ export class MovieService {
   constructor(private http: HttpClient) {}
 
   getPopular(): Observable<MoviePopularResponse> {
-    return this.http.get<MoviePopularResponse>(
-      `${BASE_URL}/popular?api_key=${API_KEY}`
-    );
+    return this.http.get<MoviePopularResponse>(`${MOVIE_URL}/popular`);
   }
 
   /*

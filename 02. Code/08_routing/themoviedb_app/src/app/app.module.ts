@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -11,6 +11,9 @@ import { NavMenuComponent } from './shared/nav-menu/nav-menu.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { SummaryPipe } from './pipes/summary.pipe';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ApiKeyInterceptor } from './interceptors/api-key.interceptor';
+import { ApprovedComponent } from './components/approved/approved.component';
+import { MyProfileComponent } from './pages/my-profile/my-profile.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     NavMenuComponent,
     MovieDetailComponent,
     SummaryPipe,
+    ApprovedComponent,
+    MyProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
       animationDuration: 300,
     }),
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: ApiKeyInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

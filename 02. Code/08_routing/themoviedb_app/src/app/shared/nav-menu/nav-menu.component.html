@@ -13,6 +13,15 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/movies">Películas</a>
         </li>
+        <li class="nav-item">
+          <button *ngIf="!existSession();else loggedin" (click)="iniciarSesion()" class="btn btn-primary">Iniciar
+            sesión</button>
+          <ng-template #loggedin>
+            <button (click)="goToProfile()" class="btn btn-primary"><img [src]="getAvatar()"
+                width="32px" />&nbsp;{{getUsername()}}</button>
+            &nbsp;<button (click)="logout()" class="btn btn-danger">Cerrar sesión</button>
+          </ng-template>
+        </li>
       </ul>
     </div>
   </div>
