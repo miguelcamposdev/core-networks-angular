@@ -5,6 +5,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { MyProfileComponent } from './pages/my-profile/my-profile.component';
+import { NewListPageComponent } from './pages/new-list-page/new-list-page.component';
 
 const routes: Routes = [
   { path: 'movies', component: MovieListComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'approved', component: ApprovedComponent },
   { path: 'my-profile', component: MyProfileComponent },
+  { path: 'nueva-lista', component: NewListPageComponent },
   { path: '', pathMatch: 'full', redirectTo: '/home' },
   { path: '**', redirectTo: '/home' },
 ];

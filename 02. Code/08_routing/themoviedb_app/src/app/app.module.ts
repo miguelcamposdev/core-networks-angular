@@ -14,6 +14,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ApiKeyInterceptor } from './interceptors/api-key.interceptor';
 import { ApprovedComponent } from './components/approved/approved.component';
 import { MyProfileComponent } from './pages/my-profile/my-profile.component';
+import { NewListPageComponent } from './pages/new-list-page/new-list-page.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,7 @@ import { MyProfileComponent } from './pages/my-profile/my-profile.component';
     SummaryPipe,
     ApprovedComponent,
     MyProfileComponent,
+    NewListPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +43,7 @@ import { MyProfileComponent } from './pages/my-profile/my-profile.component';
       innerStrokeColor: 'transparent',
       animationDuration: 300,
     }),
+    ReactiveFormsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: ApiKeyInterceptor, multi: true },
