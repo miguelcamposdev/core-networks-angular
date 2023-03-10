@@ -40,5 +40,5 @@
 * [Star Wars API](https://swapi.dev/)
 * [TheMovieDB](https://www.themoviedb.org/)
 * [TheMovieDB API Doc v3](https://developers.themoviedb.org/3)
-* * [TheMovieDB API Doc v4](https://developers.themoviedb.org/4)
+* [TheMovieDB API Doc v4](https://developers.themoviedb.org/4)
 
